@@ -1,0 +1,282 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unit Test Results: All Tests</title>
+<link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
+</head>
+<body onload="open('allclasses-frame.html','classListFrame')">
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org/">JUnit</a> and <a href="http://ant.apache.org/">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h2>All Tests</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Class</th><th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/example/simple/0_AccountTest.html">AccountTest</a></td><td><a name="testAccountEquals"></a><a href="com/example/simple/0_AccountTest.html#testAccountEquals">testAccountEquals</a></td><td>Success</td><td></td><td>0.429</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/example/simple/0_AccountTest.html">AccountTest</a></td><td><a name="testGetAccount_no"></a><a href="com/example/simple/0_AccountTest.html#testGetAccount_no">testGetAccount_no</a></td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/example/simple/1_SimpleTest.html">SimpleTest</a></td><td><a name="testSum"></a><a href="com/example/simple/1_SimpleTest.html#testSum">testSum</a></td><td>Success</td><td></td><td>0.010</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/example/simple/1_SimpleTest.html">SimpleTest</a></td><td><a name="testF"></a><a href="com/example/simple/1_SimpleTest.html#testF">testF</a></td><td>Success</td><td></td><td>0.005</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/example/simple/1_SimpleTest.html">SimpleTest</a></td><td><a name="testSquare"></a><a href="com/example/simple/1_SimpleTest.html#testSquare">testSquare</a></td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/example/simple/1_SimpleTest.html">SimpleTest</a></td><td><a name="testUpdate"></a><a href="com/example/simple/1_SimpleTest.html#testUpdate">testUpdate</a></td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/simple/2_AccountTest.html">AccountTest</a></td><td><a name="testGetAccount_no"></a><a href="com/simple/2_AccountTest.html#testGetAccount_no">testGetAccount_no</a></td><td>Success</td><td></td><td>0.039</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="com/simple/2_AccountTest.html">AccountTest</a></td><td><a name="testAccountEquals"></a><a href="com/simple/2_AccountTest.html#testAccountEquals">testAccountEquals</a></td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/simple/3_SimpleTest.html">SimpleTest</a></td><td><a name="warning"></a><a href="com/simple/3_SimpleTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testSum (java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload
+  Reason:
+    Type integer (current frame, locals[3]) is not assignable to 'java/util/Iterator' (stack map, locals[3])
+  Current Frame:
+    bci: @33
+    flags: { }
+    locals: { 'com/simple/Simple', 'java/util/Collection', integer, integer, integer, 'java/util/Iterator' }
+    stack: { }
+  Stackmap Frame:
+    bci: @33
+    flags: { }
+    locals: { 'com/simple/Simple', 'java/util/Collection', integer, 'java/util/Iterator' }
+    stack: { }
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336
+    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a
+    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e
+    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000
+    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11
+    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6
+    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9
+    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c
+    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c
+    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800
+    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035
+    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00
+    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11
+    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100
+    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03
+    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2
+    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504
+    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060
+    0x0000120: b800 1515 04ac                         
+  Stackmap Table:
+    append_frame(@33,Integer,Object[#113])
+    append_frame(@213,Integer)
+    chop_frame(@255,2)
+&#13;
+	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:65)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:504)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testSum (java.lang.VerifyError: Instruction type does not match stack map<br>Exception Details:<br>  Location:<br>    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload<br>  Reason:<br>    Type integer (current frame, locals[3]) is not assignable to 'java/util/Iterator' (stack map, locals[3])<br>  Current Frame:<br>    bci: @33<br>    flags: { }<br>    locals: { 'com/simple/Simple', 'java/util/Collection', integer, integer, integer, 'java/util/Iterator' }<br>    stack: { }<br>  Stackmap Frame:<br>    bci: @33<br>    flags: { }<br>    locals: { 'com/simple/Simple', 'java/util/Collection', integer, 'java/util/Iterator' }<br>    stack: { }<br>  Bytecode:<br>    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336<br>    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a<br>    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e<br>    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000<br>    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11<br>    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6<br>    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9<br>    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c<br>    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c<br>    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800<br>    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035<br>    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00<br>    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11<br>    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100<br>    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03<br>    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2<br>    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504<br>    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060<br>    0x0000120: b800 1515 04ac                         <br>  Stackmap Table:<br>    append_frame(@33,Integer,Object[#113])<br>    append_frame(@213,Integer)<br>    chop_frame(@255,2)<br>
+<br>	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br>)<br>
+</code></td><td>0.006</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/simple/3_SimpleTest.html">SimpleTest</a></td><td><a name="warning"></a><a href="com/simple/3_SimpleTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testUpdate (java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload
+  Reason:
+    Type integer (current frame, locals[3]) is not assignable to 'java/util/Iterator' (stack map, locals[3])
+  Current Frame:
+    bci: @33
+    flags: { }
+    locals: { 'com/simple/Simple', 'java/util/Collection', integer, integer, integer, 'java/util/Iterator' }
+    stack: { }
+  Stackmap Frame:
+    bci: @33
+    flags: { }
+    locals: { 'com/simple/Simple', 'java/util/Collection', integer, 'java/util/Iterator' }
+    stack: { }
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336
+    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a
+    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e
+    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000
+    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11
+    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6
+    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9
+    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c
+    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c
+    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800
+    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035
+    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00
+    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11
+    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100
+    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03
+    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2
+    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504
+    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060
+    0x0000120: b800 1515 04ac                         
+  Stackmap Table:
+    append_frame(@33,Integer,Object[#113])
+    append_frame(@213,Integer)
+    chop_frame(@255,2)
+&#13;
+	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:65)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:504)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testUpdate (java.lang.VerifyError: Instruction type does not match stack map<br>Exception Details:<br>  Location:<br>    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload<br>  Reason:<br>    Type integer (current frame, locals[3]) is not assignable to 'java/util/Iterator' (stack map, locals[3])<br>  Current Frame:<br>    bci: @33<br>    flags: { }<br>    locals: { 'com/simple/Simple', 'java/util/Collection', integer, integer, integer, 'java/util/Iterator' }<br>    stack: { }<br>  Stackmap Frame:<br>    bci: @33<br>    flags: { }<br>    locals: { 'com/simple/Simple', 'java/util/Collection', integer, 'java/util/Iterator' }<br>    stack: { }<br>  Bytecode:<br>    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336<br>    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a<br>    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e<br>    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000<br>    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11<br>    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6<br>    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9<br>    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c<br>    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c<br>    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800<br>    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035<br>    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00<br>    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11<br>    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100<br>    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03<br>    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2<br>    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504<br>    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060<br>    0x0000120: b800 1515 04ac                         <br>  Stackmap Table:<br>    append_frame(@33,Integer,Object[#113])<br>    append_frame(@213,Integer)<br>    chop_frame(@255,2)<br>
+<br>	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br>)<br>
+</code></td><td>0.002</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/simple/3_SimpleTest.html">SimpleTest</a></td><td><a name="warning"></a><a href="com/simple/3_SimpleTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testF (java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload
+  Reason:
+    Type integer (current frame, locals[3]) is not assignable to 'java/util/Iterator' (stack map, locals[3])
+  Current Frame:
+    bci: @33
+    flags: { }
+    locals: { 'com/simple/Simple', 'java/util/Collection', integer, integer, integer, 'java/util/Iterator' }
+    stack: { }
+  Stackmap Frame:
+    bci: @33
+    flags: { }
+    locals: { 'com/simple/Simple', 'java/util/Collection', integer, 'java/util/Iterator' }
+    stack: { }
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336
+    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a
+    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e
+    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000
+    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11
+    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6
+    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9
+    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c
+    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c
+    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800
+    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035
+    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00
+    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11
+    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100
+    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03
+    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2
+    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504
+    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060
+    0x0000120: b800 1515 04ac                         
+  Stackmap Table:
+    append_frame(@33,Integer,Object[#113])
+    append_frame(@213,Integer)
+    chop_frame(@255,2)
+&#13;
+	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:65)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:504)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testF (java.lang.VerifyError: Instruction type does not match stack map<br>Exception Details:<br>  Location:<br>    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload<br>  Reason:<br>    Type integer (current frame, locals[3]) is not assignable to 'java/util/Iterator' (stack map, locals[3])<br>  Current Frame:<br>    bci: @33<br>    flags: { }<br>    locals: { 'com/simple/Simple', 'java/util/Collection', integer, integer, integer, 'java/util/Iterator' }<br>    stack: { }<br>  Stackmap Frame:<br>    bci: @33<br>    flags: { }<br>    locals: { 'com/simple/Simple', 'java/util/Collection', integer, 'java/util/Iterator' }<br>    stack: { }<br>  Bytecode:<br>    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336<br>    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a<br>    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e<br>    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000<br>    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11<br>    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6<br>    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9<br>    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c<br>    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c<br>    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800<br>    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035<br>    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00<br>    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11<br>    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100<br>    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03<br>    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2<br>    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504<br>    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060<br>    0x0000120: b800 1515 04ac                         <br>  Stackmap Table:<br>    append_frame(@33,Integer,Object[#113])<br>    append_frame(@213,Integer)<br>    chop_frame(@255,2)<br>
+<br>	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br>)<br>
+</code></td><td>0.001</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/simple/3_SimpleTest.html">SimpleTest</a></td><td><a name="warning"></a><a href="com/simple/3_SimpleTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testSquare (java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload
+  Reason:
+    Type integer (current frame, locals[3]) is not assignable to 'java/util/Iterator' (stack map, locals[3])
+  Current Frame:
+    bci: @33
+    flags: { }
+    locals: { 'com/simple/Simple', 'java/util/Collection', integer, integer, integer, 'java/util/Iterator' }
+    stack: { }
+  Stackmap Frame:
+    bci: @33
+    flags: { }
+    locals: { 'com/simple/Simple', 'java/util/Collection', integer, 'java/util/Iterator' }
+    stack: { }
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336
+    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a
+    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e
+    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000
+    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11
+    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6
+    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9
+    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c
+    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c
+    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800
+    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035
+    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00
+    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11
+    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100
+    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03
+    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2
+    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504
+    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060
+    0x0000120: b800 1515 04ac                         
+  Stackmap Table:
+    append_frame(@33,Integer,Object[#113])
+    append_frame(@213,Integer)
+    chop_frame(@255,2)
+&#13;
+	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:65)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:504)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testSquare (java.lang.VerifyError: Instruction type does not match stack map<br>Exception Details:<br>  Location:<br>    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload<br>  Reason:<br>    Type integer (current frame, locals[3]) is not assignable to 'java/util/Iterator' (stack map, locals[3])<br>  Current Frame:<br>    bci: @33<br>    flags: { }<br>    locals: { 'com/simple/Simple', 'java/util/Collection', integer, integer, integer, 'java/util/Iterator' }<br>    stack: { }<br>  Stackmap Frame:<br>    bci: @33<br>    flags: { }<br>    locals: { 'com/simple/Simple', 'java/util/Collection', integer, 'java/util/Iterator' }<br>    stack: { }<br>  Bytecode:<br>    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336<br>    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a<br>    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e<br>    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000<br>    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11<br>    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6<br>    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9<br>    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c<br>    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c<br>    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800<br>    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035<br>    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00<br>    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11<br>    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100<br>    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03<br>    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2<br>    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504<br>    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060<br>    0x0000120: b800 1515 04ac                         <br>  Stackmap Table:<br>    append_frame(@33,Integer,Object[#113])<br>    append_frame(@213,Integer)<br>    chop_frame(@255,2)<br>
+<br>	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br>)<br>
+</code></td><td>0.001</td>
+</tr>
+</table>
+</body>
+</html>

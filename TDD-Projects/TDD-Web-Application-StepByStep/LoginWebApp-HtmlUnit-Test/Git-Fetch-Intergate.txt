@@ -1,0 +1,63 @@
+Create a new local git repository to receive files from remote repoisitory
+->git init
+Create a remote repos and add remote repository URL
+-->git remote add remote-repos http://admin@localhost:1100/gitblit/r/LoginApp-Repos.git
+Verify bthe remote 
+-->git remote -v
+
+Fetch the branches files from remote-repos
+-->git fetch remote-repos refs/heads/html-code:refs/heads/html-ui
+One more fetch for service code
+-->git fetch remote-repos refs/heads/service-code:refs/heads/service-local
+Two new local branches will get creayted in current repos.Verify
+-->git branch
+html-ui
+service-local
+Create New Web application Project to define the Code intergation from above two branches and init git repos in it.
+Now checkout the code files from html-ui branch of the stage3 repository.
+
+-->git remote add remote-repos http://admin@localhost:1100/gitblit/r/LoginApp-Repos.git
+To add a tracking branch
+-->git checkout -b html-ui --track remote-repos/html-ui
+
+git remote show  remote-repos 
+
+Switch the local branch
+-->git checkout html-ui
+Fetch remote branch html_code into local master branch
+-->git fetch remote-repos refs/heads/html-code:refs/heads/master
+Switch the local branch master
+-->git checkout master
+Merge the html-ui local branch to master branch
+-->git merge html-ui
+Merge the service-local local branch to master branch
+-->git merge service-local
+ Fatal: refusing to merge unrelated histories
+ -->git merge service-local --allow-unrelated-histories
+ Delete the other two local branches which have been merged into master branch.
+ -->git branch -d html-ui
+ -->git branch -d service-local
+ 
+ 
+ For Dynamic web application project created in Eclipse(Intergation Project)
+ Run the following commands in project dir TO CREATE,INIT,FETCCH AND MERGE AND 	finally test all siatuiations.
+ git init
+ git remote add remote-repos http://admin@localhost:1100/gitblit/r/LoginApp-Repos.git
+ git fetch remote-repos refs/heads/html-code:refs/heads/html-ui
+ git fetch remote-repos refs/heads/service-code:refs/heads/service-local
+ git checkout html-ui  : To switch the current active branch  
+ git branch -av
+ git branch master 
+ git checkout master
+ git merge html-ui
+ git merge service-local
+ git merge service-local --allow-unrelated-histories
+ git branch -av
+ git branch -d html-ui
+ 
+ After testing from build,test,analyse,deploy,acceptance test ,use  git add . to add staging and commit all files.
+ Now push this local current repository master branch to remote repository.
+ -->git remote add webCode http://admin@localhost:1100/gitblit/r/LoginApp-Repos.git
+ Push the master branch to remote repository master branch.
+ -->git push webCode master
+ 

@@ -1,0 +1,262 @@
+<project name="Agile-SourceCode-Analyser" default="coverage-report" basedir=".">
+	<property name="app.name" value="Accounts" />
+	<property name="build.dir" value="bin" />
+	<property name="source.dir" value="src" />
+	<property name="reports" location="reports"/>
+	<property name="findbugs.home.dir" value="/usr/lib/findbugs-3.0.1"/>
+	<property name="report.findbugs.dir" location="${reports}/findbugs" />
+	<property name="report.junit.dir" location="${reports}/junit" />
+
+
+	<property name="checkstyle.home.dir" location="/usr/lib/checkstyle-5.5" />
+	<property name="cobertura.home.dir" value="/usr/lib/cobertura-2.1.1" />
+	<property name="pmd.home.dir" value="/usr/lib/pmd-bin-5.1.0" />
+	<property name="htm.dir" location="${basedir}/html" />
+
+
+	<property name="report.checkstyle.dir" location="${reports}/checkstyle" />
+	<property name="report.cobertura.dir" location="${reports}/cobertura" />
+	<property name="report.pmd.dir" location="${reports}/pmd" />
+	<property name="instrumented.dir" location="${basedir}/instrumented" />
+	<property name="report.temp.dir" location="${reports}/temp" />
+	<property name="cobertura.ser.file" location="${basedir}/cobertura.ser" />
+
+
+
+	<path id="run.classpath">
+		<pathelement path="${build.dir}" />
+		<pathelement path="${basedir}/lib/junit-4.2.jar" />
+	</path>
+
+	<path id="pmd.classpath">
+		<pathelement location="${build.dir}" />
+		<fileset dir="${pmd.home.dir}/lib/">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+
+	<path id="cobertura.classpath">
+		<fileset dir="${cobertura.home.dir}">
+			<include name="cobertura*.jar" />
+			<include name="lib/**/*.jar" />
+		</fileset>
+	</path>
+
+	<taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
+
+	<target name="clean" description="Delete all result dirs to start with a clean build.">
+		<delete dir="${build.dir}" />
+		<delete dir="${report.junit.dir}" />
+		<delete dir="${reports}/findbugs" />
+		<delete dir="${report.cobertura.dir}" />
+		<delete dir="${report.cobertura.dir}/summary"/>
+
+		<delete dir="${report.checkstyle.dir}" />
+		<delete dir="${report.temp.dir}" />
+		<delete dir="${report.pmd.dir}" />
+		<delete dir="${instrumented.dir}" />
+		<delete dir="${report.cobertura.dir}/html" />
+
+		<delete file="${cobertura.ser.file}"/>
+		<delete file="cobertura.log" />
+		<delete file="${cobertura.ser.file}"/>
+
+
+		<mkdir dir="${reports}" />
+		<mkdir dir="${report.junit.dir}" />
+		<mkdir dir="${report.findbugs.dir}" />
+		<mkdir dir="${report.checkstyle.dir}" />
+		<mkdir dir="${report.temp.dir}" />
+		<mkdir dir="${report.cobertura.dir}" />
+		<mkdir dir="${report.pmd.dir}" />
+		<mkdir dir="${instrumented.dir}" />
+		<mkdir dir="${htm.dir}" />
+		
+		<!-- <mkdir dir="${report.cobertura.dir}/html" />		 -->
+
+
+	</target>
+
+	<target name="compileJava" depends="clean">
+		<mkdir dir="${build.dir}" />
+		<echo message="Compiling Java Application Source files">
+		</echo>
+		<javac includeantruntime='true' srcdir="${source.dir}" destdir="${build.dir}" debug="true" debuglevel="vars,lines,source" >
+			<include name="com/server/bank/*.java" />
+			<exclude name="com/server/test/*.java" />
+			<classpath refid="cobertura.classpath"></classpath>
+			<classpath>
+							<pathelement location="${basedir}/lib/junit-4.2.jar" />
+			</classpath>
+		</javac>
+	</target>
+
+
+
+	<target name="compiletests" depends="compileJava">
+		<echo message="Compiling Java Test source Classes"/>
+			
+<!--With lower version of ant add compiler="javac1.7"-->
+		<javac includeantruntime='true'  srcdir="${source.dir}" destdir="${build.dir}">
+			<classpath>
+				<pathelement location="${basedir}/lib/junit-4.2.jar" />
+			</classpath>
+			<include name="com/server/test/*.java" />
+		</javac>
+	</target>
+
+	<target name="runFindbugs" depends="compiletests"             
+	            description="Run findbugs code analysis to statically check for problems in the code."
+	    >
+		<echo message="Running the findBugs task...."/>
+		<mkdir dir="${reports}/findbugs" />
+		<!-- Fail this target if FindBugs is not installed. -->
+		<available file="${findbugs.home.dir}/lib/findbugs.jar" property="findbugs.available" />
+		<fail unless="findbugs.available"
+	              message="Error: FINDBUGS_HOME not set or findbugs.jar not found."
+	        />
+		<taskdef name="findbugs"
+	                 classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
+	                 classpath="${findbugs.home.dir}/lib/findbugs-ant.jar"
+	        />
+
+		<!-- Run FindBugs. -->
+		<mkdir dir="${report.findbugs.dir}" />
+		<findbugs home="${findbugs.home.dir}"
+	                  workHard="true"	
+	        	      output="xml:withMessages"	
+	                  outputFile="${report.findbugs.dir}/findbugs.xml" >
+			
+			<sourcePath path="${source.dir}/com/server/bank/" />
+			<class location="${build.dir}/com/server/bank" />	         		 
+			<auxClasspath>
+				<fileset file="${basedir}/lib/junit-4.2.jar"/>		
+				<fileset file="${cobertura.home.dir}/lib/slf4j-api-1.7.5.jar"/>
+			</auxClasspath>
+			 
+		</findbugs>
+	</target>
+
+	<target name="findbugsReport" depends="runFindbugs" description="Generate a report on static error analysis by findbugs.">
+		<echo message="Running findbugsReport Task" />
+		<xslt in="${report.findbugs.dir}/findbugs.xml" style="${findbugs.home.dir}/src/xsl/fancy.xsl" out="${report.findbugs.dir}/findbugs-report.html" />
+	</target>
+
+
+	<taskdef name="pmdAnalyse" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd.classpath" />
+
+	<target name="runPMD" depends="findbugsReport">
+		<echo message="Running PMD Task" />
+		<pmdAnalyse rulesetfiles="PMD_RuleSets/rules.xml">
+			<formatter type="xml" toFile="${report.pmd.dir}/pmd_report.xml" />			
+			<!--fileset dir="${source.dir}" includes="com/server/bank/*.java" excludes="com/server/test/*.java"/-->
+			
+			<fileset dir="${source.dir}" includes="com/server/bank/*.java"/>
+		</pmdAnalyse>
+		<xslt in="${report.pmd.dir}/pmd_report.xml" style="${pmd.home.dir}/etc/xslt/pmd-report-per-class.xslt" out="${report.pmd.dir}/pmd_report.html" />
+	</target>
+
+	<target name="RunCheckstyle" depends="runPMD" description="Run the Checkstyle to find code convention violations.">
+		<taskdef resource="checkstyletask.properties" classpath="${checkstyle.home.dir}/checkstyle-5.5-all.jar" />
+		<echo message="Running RunCheckstyle Task" />
+
+		<!-- run verification of installation-->
+		<available file="${checkstyle.home.dir}/checkstyle-5.5-all.jar" property="checkstyle.available" />
+		<fail unless="checkstyle.available" message="Error: CHECKSTYLE_HOME not set or checkstyle-5.5-all.jar not found." />
+		<mkdir dir="${report.checkstyle.dir}" />
+
+		<!-- run analysis-->
+		<checkstyle config="${checkstyle.home.dir}/sun_checks.xml" failureProperty="checkstyle.failure" failOnViolation="false">
+			<formatter type="xml" tofile="${report.checkstyle.dir}/checkstyle_report.xml" />
+			<!--fileset dir="${source.dir}" includes="**/*.java" /-->
+			<fileset dir="${source.dir}">
+					<include name="com/server/bank/*.java" />
+					<exclude name="com/server/test/*.java" />	
+			</fileset> 
+		</checkstyle>
+
+		<style in="${report.checkstyle.dir}/checkstyle_report.xml" out="${report.checkstyle.dir}/checkstyle_report.html" style="${checkstyle.home.dir}/contrib/checkstyle-noframes.xsl" />
+	</target>
+
+	<target name="coverage-check">
+		<taskdef classpathref="cobertura.classpath" resource="tasks.properties" />
+		
+		<cobertura-check branchrate="100" linerate="100" datafile="${cobertura.ser.file}" />
+	</target>
+
+	<target name="cobertura" description="Instrument the project for code coverage in test cases." depends="coverage-check">
+		<echo message="Running cobertura instrument Task" />
+		<taskdef classpathref="cobertura.classpath" resource="tasks.properties" />
+		
+		<delete file="${cobertura.ser.file}"/>
+
+		<!--cobertura-instrument todir="${instrumented.dir}" ignoreTrivial="true" -->
+			
+	     <cobertura-instrument todir="${instrumented.dir}">
+
+			<ignore regex="org.slf4j.*" />
+			
+			<fileset dir="${build.dir}">
+				<include name="com/server/bank/*.class" />
+				 <exclude name="com/server/test/*.class" />							 
+		</fileset>
+	     	 
+		</cobertura-instrument>
+
+	</target>
+
+	<target name="runJUNIT" depends="cobertura" description="Run all junit test cases.">
+		<echo message="Running junit test Task" />
+
+		<junit printsummary="yes" fork="yes" haltonfailure="no" showoutput="yes">	 
+			 
+			
+			   <!--
+							Note the classpath order: instrumented classes are before the
+							original (uninstrumented) classes.  This is important.
+			-->
+			<classpath location="${instrumented.dir}" />
+		    <classpath location="${build.dir}" />
+
+			<classpath refid="cobertura.classpath" />
+
+			<formatter type="xml" />
+			<test name="com.server.test.BankTestSuite" haltonfailure="no" outfile="test-result" 
+						todir="${report.junit.dir}">
+				<formatter type="xml"/>
+			</test>
+		</junit>
+		<junitreport todir="${report.junit.dir}">
+			<fileset dir="${report.junit.dir}">
+				<include name="*.xml" />
+			</fileset>
+			<report format="frames" todir="${report.junit.dir}" />
+		</junitreport>
+	</target>
+
+
+	<target name="coberturaReport" depends="runJUNIT" description="Generate an HTML report on Cobertura Test coverage.">
+		<echo message="Running Cobertura Report" />
+	 	
+		<!--XML Report-->
+		<cobertura-report srcdir="${source.dir}" destdir="${report.cobertura.dir}" format="summaryXml" />
+		  
+		<!--Summary XML Report-->
+		<cobertura-report srcdir="${source.dir}" destdir="${report.cobertura.dir}" format="xml" />
+		
+		<!--HTML Report-->
+		 <cobertura-report srcdir="${source.dir}" format="html" datafile="${cobertura.ser.file}" destdir="${report.cobertura.dir}/html">
+			<fileset dir="${source.dir}">
+						<include name="com/server/bank/*.java"/>
+						<exclude name="com/server/test/*.java" />
+			</fileset>
+		 	</cobertura-report>		 
+ 
+	</target>
+	
+	<target name="coverage-report" depends="RunCheckstyle,coberturaReport" description="Generate Code Analysis,JUnit Test and code coverage reports."/>
+
+
+</project>
+

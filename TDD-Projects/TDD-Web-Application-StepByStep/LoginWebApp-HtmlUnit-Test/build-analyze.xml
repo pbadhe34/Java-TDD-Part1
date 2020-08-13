@@ -1,0 +1,187 @@
+<project name="SourceCode-Analyser" default="RunCheckstyle" basedir=".">
+	<property name="app.name" value="LoginWebApp" />
+	<property name="build.dir" value="build/classes" />
+	<property name="source.dir" value="src" />
+	<property name="reports" location="reports"/>
+	<property name="findbugs.home.dir" value="D:/findbugs-3.0.1"/>
+	<property name="report.findbugs.dir" location="${reports}/findbugs" />
+	<property name="report.junit.dir" location="${reports}/junit" />
+
+
+	<property name="checkstyle.home.dir" location="D:/checkstyle-5.5" />	 
+	<property name="pmd.home.dir" value="D:/pmd-bin-5.1.0" />
+	<property name="htm.dir" location="${basedir}/html" />
+	<property name="report.checkstyle.dir" location="${reports}/checkstyle" />
+ 	<property name="report.pmd.dir" location="${reports}/pmd" />	 
+	<property name="report.temp.dir" location="${reports}/temp" />
+	 
+
+  <path id="compile.classpath">
+		<pathelement location="${java.home}/../lib/tools.jar" />
+		<fileset dir="${basedir}/lib">
+			<include name="junit-4.2.jar" />			 
+			<include name="mockito-all-1.10.19.jar" />
+			<include name="servlet-api.jar" />
+			<include name="spring-test-4.1.5.RELEASE.jar" />
+			<include name="spring-core-4.1.5.RELEASE.jar" />
+			<include name="HtmlUnit/*.jar" />
+		</fileset>
+		<!-- <pathelement location="lib/servlet-api.jar" /> -->
+		<fileset dir="WebContent/WEB-INF/lib">
+          <include name="*.jar"/>
+         </fileset>  
+         
+		<pathelement location="${build.dir}" />
+		<fileset dir="${pmd.home.dir}/lib/">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<path id="run.classpath">
+		<pathelement path="${build.dir}" />
+		<pathelement path="${basedir}/lib/junit-4.2.jar" />		 
+		<fileset dir="WebContent/WEB-INF/lib">
+          <include name="*.jar"/>
+         </fileset>  
+	</path>
+
+	<path id="pmd.classpath">
+		<pathelement location="${build.dir}" />
+		<fileset dir="${pmd.home.dir}/lib/">
+			<include name="*.jar" />
+		</fileset>
+	</path> 
+	 
+
+	<target name="clean" description="Delete all result dirs to start with a clean build.">
+		<delete dir="${build.dir}" />
+		<delete dir="${report.junit.dir}" />
+		<delete dir="${reports}/findbugs" />		 
+
+		<delete dir="${report.checkstyle.dir}" />
+		<delete dir="${report.temp.dir}" />
+		<delete dir="${report.pmd.dir}" />				 
+
+        <mkdir dir="${build.dir}" />
+		<mkdir dir="${reports}" />
+		<mkdir dir="${report.junit.dir}" />
+		<mkdir dir="${report.findbugs.dir}" />
+		<mkdir dir="${report.checkstyle.dir}" />
+		<mkdir dir="${report.temp.dir}" />		 
+		<mkdir dir="${report.pmd.dir}" />	 
+		<mkdir dir="${htm.dir}" />	 
+
+
+	</target>
+
+	<target name="compileJava" depends="clean">
+		 
+		<echo message="Compiling Java Domain Source files">
+		</echo>
+		<javac includeantruntime='true' srcdir="${source.dir}" destdir="${build.dir}" debug="true" debuglevel="vars,lines,source" classpathref="compile.classpath">
+			<include name="com/server/*.java" />
+			<include name="com/data/service/*.java" />			 
+			<classpath>
+							<pathelement location="${basedir}/lib/junit-4.2.jar" />
+			</classpath>
+		</javac>
+	</target>
+
+
+
+	<target name="compiletests" depends="compileJava">
+		<echo message="Compiling Java Test source Classes"/>
+
+		<javac includeantruntime='true' srcdir="${source.dir}" destdir="${build.dir}" classpathref="compile.classpath">
+			<classpath>
+				<pathelement location="${basedir}/lib/junit-4.2.jar" />
+			</classpath>
+			<include name="test/com/server/*.java" />
+		</javac>
+	</target>
+
+	<target name="runFindbugs" depends="compileJava"             
+	            description="Run findbugs code analysis to statically check for problems in the code."
+	    >
+		<echo message="Running the findBugs task...."/>
+		<mkdir dir="${reports}/findbugs" />
+		<!-- Fail this target if FindBugs is not installed. -->
+		<available file="${findbugs.home.dir}/lib/findbugs.jar" property="findbugs.available" />
+		<fail unless="findbugs.available"
+	              message="Error: FINDBUGS_HOME not set or findbugs.jar not found."
+	        />
+		<taskdef name="findbugs"
+	                 classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
+	                 classpath="${findbugs.home.dir}/lib/findbugs-ant.jar"
+	        />
+
+		<!-- Run FindBugs. -->
+		<mkdir dir="${report.findbugs.dir}" />
+		<findbugs home="${findbugs.home.dir}"
+	                  workHard="true"	
+	        	      output="xml:withMessages"	
+	                  outputFile="${report.findbugs.dir}/findbugs.xml" >
+			
+			<sourcePath path="${source.dir}/com/server/,${source.dir}/com/data/service/" />
+			<class location="${build.dir}/com/server/" />	
+			<class location="${build.dir}/com/data/service/" />         		 
+			<auxClasspath>
+				<fileset file="${basedir}/lib/junit-4.2.jar"/>	
+				<fileset file="${basedir}/lib/servlet-api.jar"/>		
+				<fileset file="${cobertura.home.dir}/lib/slf4j-api-1.7.5.jar"/>
+			</auxClasspath>
+			 
+		</findbugs>
+	</target>
+
+	<target name="findbugsReport" depends="runFindbugs" description="Generate a report on static error analysis by findbugs.">
+		<echo message="Running findbugsReport Task" />
+		<xslt in="${report.findbugs.dir}/findbugs.xml" style="${findbugs.home.dir}/src/xsl/fancy.xsl" out="${report.findbugs.dir}/findbugs-report.html" />
+	</target>
+
+
+	<taskdef name="pmdAnalyse" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="compile.classpath" />
+
+	<target name="runPMD" depends="findbugsReport">
+		<echo message="Running PMD Task" />
+		<pmdAnalyse rulesetfiles="PMD_RuleSets/rules.xml" >
+				
+	   <fileset dir="${basedir}/lib" includes="servlet-api.jar"/>			 
+			 
+		<fileset dir="${source.dir}">
+			<include name="com/server/*.java"/>	 
+			<include name="com/data/service/*.java"/>	
+			<exclude name="test/com/server/*.java"/>  			 
+		</fileset>
+		<formatter type="xml" toFile="${report.pmd.dir}/pmd_report.xml" />		
+		</pmdAnalyse>
+		<xslt in="${report.pmd.dir}/pmd_report.xml" style="${pmd.home.dir}/etc/xslt/pmd-report-per-class.xslt" out="${report.pmd.dir}/pmd_report.html" />
+	</target>
+
+	<target name="RunCheckstyle" depends="runPMD" description="Run the Checkstyle to find code convention violations.">
+		<taskdef resource="checkstyletask.properties" classpath="${checkstyle.home.dir}/checkstyle-5.5-all.jar" />
+		<echo message="Running RunCheckstyle Task" />
+
+		<!-- run verification of installation-->
+		<available file="${checkstyle.home.dir}/checkstyle-5.5-all.jar" property="checkstyle.available" />
+		<fail unless="checkstyle.available" message="Error: CHECKSTYLE_HOME not set or checkstyle-5.5-all.jar not found." />
+		<mkdir dir="${report.checkstyle.dir}" />
+
+		<!-- run analysis-->
+		<checkstyle config="${checkstyle.home.dir}/sun_checks.xml" failureProperty="checkstyle.failure" failOnViolation="false">
+			<formatter type="xml" tofile="${report.checkstyle.dir}/checkstyle_report.xml" />
+			<!--fileset dir="${source.dir}" includes="**/*.java" /-->
+			<fileset dir="${source.dir}">
+					<include name="com/server/*.java" />
+					<include name="com/data/service/*.java" />
+					<exclude name="test/com/server/*.java" />	
+			</fileset> 
+		</checkstyle>
+
+		<style in="${report.checkstyle.dir}/checkstyle_report.xml" out="${report.checkstyle.dir}/checkstyle_report.html" style="${checkstyle.home.dir}/contrib/checkstyle-noframes.xsl" />
+	</target>	
+	 
+
+	 
+</project>
+

@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="Prakash-PC" id="0" name="AccountTest" package="com.example.simple" skipped="0" tests="2" time="0.596" timestamp="2016-03-23T17:27:21">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="coverage.summaryxml.dir" value="reports/cobertura-summary-xml" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="eclipse.pdebuild.templates" value="/D:/eclipse-jee-mars/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/templates/" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Windows 7" />
+
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_25\jre\classes" />
+
+          <property name="reports.html.dir" value="reports/junit-html" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020" />
+
+          <property name="java.runtime.version" value="1.8.0_25-b18" />
+
+          <property name="cobertura.dir" value="D:/cobertura-2.1.1" />
+
+          <property name="user.name" value="Prakash" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\bin" />
+
+          <property name="reports.dir" value="reports" />
+
+          <property name="ant.project.default-target" value="coverage" />
+
+          <property name="ant.project.name" value="cobertura.usage" />
+
+          <property name="java.version" value="1.8.0_25" />
+
+          <property name="coverage.html.dir" value="reports/cobertura-html" />
+
+          <property name="user.timezone" value="Asia/Calcutta" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="amd64" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="classes.dir" value="classes" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_25\jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="D:\Java-Projects\Cobertura-Test\build.xml" />
+
+          <property name="os.version" value="6.1" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="25.25-b02" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="user.script" value="" />
+
+          <property name="eclipse.pdebuild.scripts" value="/D:/eclipse-jee-mars/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/scripts/" />
+
+          <property name="reports.xml.dir" value="reports/junit-xml" />
+
+          <property name="user.home" value="C:\Users\Prakash" />
+
+          <property name="ant.file.cobertura.usage" value="D:\Java-Projects\Cobertura-Test\build.xml" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="coverage.xml.dir" value="reports/cobertura-xml" />
+
+          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_25/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_25/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_25/bin/../jre/lib/amd64;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;D:\SqlServer-JDBC4\sqljdbc_4.0\enu\auth\x64;C:\Program Files\Java\jdk1.8.0_25\bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Windows Live\Shared;C:\Windows\SysWOW64\WindowsPowerShell\v1.0\Modules\TShell\TShell\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;D:\SqlServer-JDBC4\sqljdbc_4.0\enu\auth\x64;C:\Program Files\Java\jdk1.8.0_25\bin;D:\apache-karaf-2.4.3\bin;D:\groovy-2.4.5\bin;D:\GGTS-3.6-Win64\ggts-bundle\grails-2.4.4\bin;C:\Users\Prakash\AppData\Roaming\npm;D:\gradle-2.6\bin;;C:\Program Files\Docker Toolbox;D:\eclipse-jee-mars;;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.example.simple.AccountTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\Java-Projects\Cobertura-Test\reports\junit-xml\TEST-com.example.simple.AccountTest.xml crashfile=D:\Java-Projects\Cobertura-Test\junitvmwatcher5155247922630227094.properties propsfile=D:\Java-Projects\Cobertura-Test\junit8785033953171335269.properties" />
+
+          <property name="java.class.path" value="D:\Java-Projects\Cobertura-Test\instrumented;D:\Java-Projects\Cobertura-Test\classes;D:\cobertura-2.1.1\cobertura-2.1.1-javadoc.jar;D:\cobertura-2.1.1\cobertura-2.1.1-sources.jar;D:\cobertura-2.1.1\cobertura-2.1.1.jar;D:\cobertura-2.1.1\lib\asm-5.0.1.jar;D:\cobertura-2.1.1\lib\asm-analysis-5.0.1.jar;D:\cobertura-2.1.1\lib\asm-commons-5.0.1.jar;D:\cobertura-2.1.1\lib\asm-tree-5.0.1.jar;D:\cobertura-2.1.1\lib\asm-util-5.0.1.jar;D:\cobertura-2.1.1\lib\commons-lang3-3.3.2.jar;D:\cobertura-2.1.1\lib\hamcrest-core-1.3.jar;D:\cobertura-2.1.1\lib\jaxen-1.1.4.jar;D:\cobertura-2.1.1\lib\jetty-6.1.14.jar;D:\cobertura-2.1.1\lib\jetty-util-6.1.14.jar;D:\cobertura-2.1.1\lib\junit-4.11.jar;D:\cobertura-2.1.1\lib\log4j-1.2.9.jar;D:\cobertura-2.1.1\lib\logback-classic-1.0.13.jar;D:\cobertura-2.1.1\lib\logback-core-1.0.13.jar;D:\cobertura-2.1.1\lib\oro-2.0.8.jar;D:\cobertura-2.1.1\lib\servlet-api-2.5-6.1.14.jar;D:\cobertura-2.1.1\lib\slf4j-api-1.7.5.jar;D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant-launcher.jar;D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant.jar;D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant-junit.jar;D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="Service Pack 1" />
+
+          <property name="eclipse.pdebuild.home" value="/D:/eclipse-jee-mars/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/./" />
+
+          <property name="java.io.tmpdir" value="C:\Users\Prakash\AppData\Local\Temp\" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="ant.file.type.cobertura.usage" value="file" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="instrumented.dir" value="instrumented" />
+
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="D:\Java-Projects\Cobertura-Test" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="D:\Java-Projects\Cobertura-Test" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant.jar" />
+
+          <property name="file.encoding" value="Cp1252" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="src.dir" value="src" />
+
+          <property name="ant.project.invoked-targets" value="coverage" />
+
+      </properties>
+
+      <testcase classname="com.example.simple.AccountTest" name="testAccountEquals" time="0.429" />
+
+      <testcase classname="com.example.simple.AccountTest" name="testGetAccount_no" time="0.001" />
+
+      <system-out><![CDATA[22:57:21,588 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+22:57:21,588 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+22:57:21,589 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/D:/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
+22:57:21,595 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+22:57:21,596 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/D:/cobertura-2.1.1/cobertura-2.1.1.jar!/logback.xml]
+22:57:21,596 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/D:/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
+22:57:21,654 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@39fb3ab6 - URL [jar:file:/D:/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+22:57:21,765 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+22:57:21,769 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+22:57:21,787 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+22:57:21,830 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+22:57:21,913 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+22:57:21,913 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+22:57:21,913 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+22:57:21,914 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+22:57:21,916 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6276ae34 - Registering current configuration as safe fallback point
+
+Account.Account()
+Account.Account()
+implemented in accountTest
+Account.Account()
+Account.getAccount_no()
+]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Prakash-PC" id="1" name="SimpleTest" package="com.example.simple" skipped="0" tests="4" time="0.041" timestamp="2016-03-23T17:27:24">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="coverage.summaryxml.dir" value="reports/cobertura-summary-xml" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="eclipse.pdebuild.templates" value="/D:/eclipse-jee-mars/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/templates/" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Windows 7" />
+
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_25\jre\classes" />
+
+          <property name="reports.html.dir" value="reports/junit-html" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020" />
+
+          <property name="java.runtime.version" value="1.8.0_25-b18" />
+
+          <property name="cobertura.dir" value="D:/cobertura-2.1.1" />
+
+          <property name="user.name" value="Prakash" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\bin" />
+
+          <property name="reports.dir" value="reports" />
+
+          <property name="ant.project.default-target" value="coverage" />
+
+          <property name="ant.project.name" value="cobertura.usage" />
+
+          <property name="java.version" value="1.8.0_25" />
+
+          <property name="coverage.html.dir" value="reports/cobertura-html" />
+
+          <property name="user.timezone" value="Asia/Calcutta" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="amd64" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="classes.dir" value="classes" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_25\jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="D:\Java-Projects\Cobertura-Test\build.xml" />
+
+          <property name="os.version" value="6.1" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="25.25-b02" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="user.script" value="" />
+
+          <property name="eclipse.pdebuild.scripts" value="/D:/eclipse-jee-mars/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/scripts/" />
+
+          <property name="reports.xml.dir" value="reports/junit-xml" />
+
+          <property name="user.home" value="C:\Users\Prakash" />
+
+          <property name="ant.file.cobertura.usage" value="D:\Java-Projects\Cobertura-Test\build.xml" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="coverage.xml.dir" value="reports/cobertura-xml" />
+
+          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_25/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_25/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_25/bin/../jre/lib/amd64;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;D:\SqlServer-JDBC4\sqljdbc_4.0\enu\auth\x64;C:\Program Files\Java\jdk1.8.0_25\bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Windows Live\Shared;C:\Windows\SysWOW64\WindowsPowerShell\v1.0\Modules\TShell\TShell\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;D:\SqlServer-JDBC4\sqljdbc_4.0\enu\auth\x64;C:\Program Files\Java\jdk1.8.0_25\bin;D:\apache-karaf-2.4.3\bin;D:\groovy-2.4.5\bin;D:\GGTS-3.6-Win64\ggts-bundle\grails-2.4.4\bin;C:\Users\Prakash\AppData\Roaming\npm;D:\gradle-2.6\bin;;C:\Program Files\Docker Toolbox;D:\eclipse-jee-mars;;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.example.simple.SimpleTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\Java-Projects\Cobertura-Test\reports\junit-xml\TEST-com.example.simple.SimpleTest.xml crashfile=D:\Java-Projects\Cobertura-Test\junitvmwatcher5544660798020900730.properties propsfile=D:\Java-Projects\Cobertura-Test\junit1975305011544832623.properties" />
+
+          <property name="java.class.path" value="D:\Java-Projects\Cobertura-Test\instrumented;D:\Java-Projects\Cobertura-Test\classes;D:\cobertura-2.1.1\cobertura-2.1.1-javadoc.jar;D:\cobertura-2.1.1\cobertura-2.1.1-sources.jar;D:\cobertura-2.1.1\cobertura-2.1.1.jar;D:\cobertura-2.1.1\lib\asm-5.0.1.jar;D:\cobertura-2.1.1\lib\asm-analysis-5.0.1.jar;D:\cobertura-2.1.1\lib\asm-commons-5.0.1.jar;D:\cobertura-2.1.1\lib\asm-tree-5.0.1.jar;D:\cobertura-2.1.1\lib\asm-util-5.0.1.jar;D:\cobertura-2.1.1\lib\commons-lang3-3.3.2.jar;D:\cobertura-2.1.1\lib\hamcrest-core-1.3.jar;D:\cobertura-2.1.1\lib\jaxen-1.1.4.jar;D:\cobertura-2.1.1\lib\jetty-6.1.14.jar;D:\cobertura-2.1.1\lib\jetty-util-6.1.14.jar;D:\cobertura-2.1.1\lib\junit-4.11.jar;D:\cobertura-2.1.1\lib\log4j-1.2.9.jar;D:\cobertura-2.1.1\lib\logback-classic-1.0.13.jar;D:\cobertura-2.1.1\lib\logback-core-1.0.13.jar;D:\cobertura-2.1.1\lib\oro-2.0.8.jar;D:\cobertura-2.1.1\lib\servlet-api-2.5-6.1.14.jar;D:\cobertura-2.1.1\lib\slf4j-api-1.7.5.jar;D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant-launcher.jar;D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant.jar;D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant-junit.jar;D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="Service Pack 1" />
+
+          <property name="eclipse.pdebuild.home" value="/D:/eclipse-jee-mars/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/./" />
+
+          <property name="java.io.tmpdir" value="C:\Users\Prakash\AppData\Local\Temp\" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="ant.file.type.cobertura.usage" value="file" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="instrumented.dir" value="instrumented" />
+
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="D:\Java-Projects\Cobertura-Test" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="D:\Java-Projects\Cobertura-Test" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="D:\eclipse-jee-mars\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant.jar" />
+
+          <property name="file.encoding" value="Cp1252" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="src.dir" value="src" />
+
+          <property name="ant.project.invoked-targets" value="coverage" />
+
+      </properties>
+
+      <testcase classname="com.example.simple.SimpleTest" name="testSum" time="0.01" />
+
+      <testcase classname="com.example.simple.SimpleTest" name="testF" time="0.005" />
+
+      <testcase classname="com.example.simple.SimpleTest" name="testSquare" time="0.001" />
+
+      <testcase classname="com.example.simple.SimpleTest" name="testUpdate" time="0.001" />
+
+      <system-out><![CDATA[22:57:23,695 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+22:57:23,696 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+22:57:23,696 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/D:/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
+22:57:23,698 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+22:57:23,699 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/D:/cobertura-2.1.1/cobertura-2.1.1.jar!/logback.xml]
+22:57:23,699 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [jar:file:/D:/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml]
+22:57:23,734 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@3f0ee7cb - URL [jar:file:/D:/cobertura-2.1.1/cobertura-2.1.1-sources.jar!/logback.xml] is not of type file
+22:57:23,834 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+22:57:23,861 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+22:57:23,879 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+22:57:23,923 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+22:57:24,010 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [net.sourceforge.cobertura] to INFO
+22:57:24,010 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+22:57:24,010 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+22:57:24,011 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+22:57:24,014 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@75bd9247 - Registering current configuration as safe fallback point
+
+[DEBUG] value: 3
+[DEBUG] value: 5
+[DEBUG] value: 8
+[DEBUG] result: 16
+[DEBUG] x: -1
+[DEBUG] negative x
+[DEBUG] x: -1
+
+
+Simple class square falg
+[DEBUG] result: 1
+[DEBUG] x: 6
+[DEBUG] x: 1
+
+
+Simple class square falg
+[DEBUG] result: 1
+[DEBUG] x: -1
+
+
+Simple class square falg
+[DEBUG] result: 1
+]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Prakash-PC" id="2" name="AccountTest" package="com.simple" skipped="0" tests="2" time="0.395" timestamp="2020-07-31T19:37:00">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="coverage.summaryxml.dir" value="reports/cobertura-summary-xml" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="eclipse.pdebuild.templates" value="D:\eclipse-jee-photon\plugins\org.eclipse.pde.build_3.10.0.v20180512-1217\templates" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Windows 7" />
+
+          <property name="sun.boot.class.path" value="D:\jdk1.8.144\jre\lib\resources.jar;D:\jdk1.8.144\jre\lib\rt.jar;D:\jdk1.8.144\jre\lib\sunrsasign.jar;D:\jdk1.8.144\jre\lib\jsse.jar;D:\jdk1.8.144\jre\lib\jce.jar;D:\jdk1.8.144\jre\lib\charsets.jar;D:\jdk1.8.144\jre\lib\jfr.jar;D:\jdk1.8.144\jre\classes" />
+
+          <property name="reports.html.dir" value="reports/junit-html" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627" />
+
+          <property name="java.runtime.version" value="1.8.0_144-b01" />
+
+          <property name="cobertura.dir" value="D:/EJB3.1-TDD-Testing/EJB-Day8/Cobertura-Code-Coverage/cobertura-1.9.4.1-bin" />
+
+          <property name="user.name" value="Prakash" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="D:\jdk1.8.144\jre\bin" />
+
+          <property name="reports.dir" value="reports" />
+
+          <property name="ant.project.default-target" value="coverage" />
+
+          <property name="ant.project.name" value="cobertura.usage" />
+
+          <property name="java.version" value="1.8.0_144" />
+
+          <property name="coverage.html.dir" value="reports/cobertura-html" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="java.endorsed.dirs" value="D:\jdk1.8.144\jre\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="amd64" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="classes.dir" value="classes" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="D:\jdk1.8.144\jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="D:\Junit4-test-apps\Cobertura-Code-Coverage\build.xml" />
+
+          <property name="os.version" value="6.1" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="25.144-b01" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="user.script" value="" />
+
+          <property name="eclipse.pdebuild.scripts" value="D:\eclipse-jee-photon\plugins\org.eclipse.pde.build_3.10.0.v20180512-1217\scripts" />
+
+          <property name="reports.xml.dir" value="reports/junit-xml" />
+
+          <property name="user.home" value="C:\Users\Prakash" />
+
+          <property name="ant.file.cobertura.usage" value="D:\Junit4-test-apps\Cobertura-Code-Coverage\build.xml" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="coverage.xml.dir" value="reports/cobertura-xml" />
+
+          <property name="java.library.path" value="D:\jdk1.8.144\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/jdk1.8.144/bin/../jre/bin/server;D:/jdk1.8.144/bin/../jre/bin;D:/jdk1.8.144/bin/../jre/lib/amd64;D:/jdk1.8.144/bin;C:\Program Files\Git\bin;C:\Windows\System32;D:\spring-2.0.1\bin;C:\Program Files\Docker Toolbox;D:\Kubectl-Path;C:\Users\Prakash\AppData\Roaming\npm;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\PuTTY\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Perforce\;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Server 5.1\bin;D:\curl-7.70\bin;D:/jdk1.8.144/bin;C:\Program Files\Git\bin;C:\Windows\System32;D:\spring-2.0.1\bin;C:\Program Files\Docker Toolbox;D:\Kubectl-Path;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.9\sbin;C:\Python27;C:\Python27\Scripts;C:\Program Files\nodejs;;C:\Program Files\Docker Toolbox;C:\Users\Prakash\AppData\Roaming\npm;C:\Users\Prakash\AppData\Local\Programs\Microsoft VS Code\bin;D:\curl-7.70\bin;;D:\eclipse-jee-photon;;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.simple.AccountTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\Junit4-test-apps\Cobertura-Code-Coverage\reports\junit-xml\TEST-com.simple.AccountTest.xml crashfile=D:\Junit4-test-apps\Cobertura-Code-Coverage\junitvmwatcher2794414890391384644.properties propsfile=D:\Junit4-test-apps\Cobertura-Code-Coverage\junit1262218286454520663.properties" />
+
+          <property name="java.class.path" value="D:\Junit4-test-apps\Cobertura-Code-Coverage\instrumented;D:\Junit4-test-apps\Cobertura-Code-Coverage\classes;D:\EJB3.1-TDD-Testing\EJB-Day8\Cobertura-Code-Coverage\cobertura-1.9.4.1-bin\cobertura.jar;D:\EJB3.1-TDD-Testing\EJB-Day8\Cobertura-Code-Coverage\cobertura-1.9.4.1-bin\lib\asm-3.0.jar;D:\EJB3.1-TDD-Testing\EJB-Day8\Cobertura-Code-Coverage\cobertura-1.9.4.1-bin\lib\asm-tree-3.0.jar;D:\EJB3.1-TDD-Testing\EJB-Day8\Cobertura-Code-Coverage\cobertura-1.9.4.1-bin\lib\jakarta-oro-2.0.8.jar;D:\EJB3.1-TDD-Testing\EJB-Day8\Cobertura-Code-Coverage\cobertura-1.9.4.1-bin\lib\log4j-1.2.9.jar;D:\Junit4-test-apps\Cobertura-Code-Coverage\junit-4.2.jar;D:\Junit4-test-apps\Cobertura-Code-Coverage\slf4j-api-1.7.30.jar;D:\Junit4-test-apps\Cobertura-Code-Coverage\slf4j-log4j12-1.7.1.jar;D:\Junit4-test-apps\Cobertura-Code-Coverage;D:\jdk1.8.144\jre\lib\ext\jfxrt.jar;D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib\ant-launcher.jar;D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib\ant.jar;D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib\ant-junit.jar;D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib\ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.10.3 compiled on March 24 2018" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="base.dir" value="." />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="Service Pack 1" />
+
+          <property name="eclipse.pdebuild.home" value="D:\eclipse-jee-photon\plugins\org.eclipse.pde.build_3.10.0.v20180512-1217\." />
+
+          <property name="java.io.tmpdir" value="C:\Users\Prakash\AppData\Local\Temp\" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="ant.file.type.cobertura.usage" value="file" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="instrumented.dir" value="instrumented" />
+
+          <property name="java.ext.dirs" value="D:\jdk1.8.144\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="D:\Junit4-test-apps\Cobertura-Code-Coverage" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="D:\Junit4-test-apps\Cobertura-Code-Coverage" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib\ant.jar" />
+
+          <property name="file.encoding" value="Cp1252" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="src.dir" value="src" />
+
+          <property name="ant.project.invoked-targets" value="coverage" />
+
+      </properties>
+
+      <testcase classname="com.simple.AccountTest" name="testGetAccount_no" time="0.039" />
+
+      <testcase classname="com.simple.AccountTest" name="testAccountEquals" time="0.001" />
+
+      <system-out><![CDATA[implemented in accountTest
+Account.Account()
+Account.getAccount_no()
+Account.Account()
+Account.Account()
+]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="4" hostname="Prakash-PC" id="3" name="SimpleTest" package="com.simple" skipped="0" tests="4" time="0.184" timestamp="2020-07-31T19:37:02">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="coverage.summaryxml.dir" value="reports/cobertura-summary-xml" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="eclipse.pdebuild.templates" value="D:\eclipse-jee-photon\plugins\org.eclipse.pde.build_3.10.0.v20180512-1217\templates" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Windows 7" />
+
+          <property name="sun.boot.class.path" value="D:\jdk1.8.144\jre\lib\resources.jar;D:\jdk1.8.144\jre\lib\rt.jar;D:\jdk1.8.144\jre\lib\sunrsasign.jar;D:\jdk1.8.144\jre\lib\jsse.jar;D:\jdk1.8.144\jre\lib\jce.jar;D:\jdk1.8.144\jre\lib\charsets.jar;D:\jdk1.8.144\jre\lib\jfr.jar;D:\jdk1.8.144\jre\classes" />
+
+          <property name="reports.html.dir" value="reports/junit-html" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627" />
+
+          <property name="java.runtime.version" value="1.8.0_144-b01" />
+
+          <property name="cobertura.dir" value="D:/EJB3.1-TDD-Testing/EJB-Day8/Cobertura-Code-Coverage/cobertura-1.9.4.1-bin" />
+
+          <property name="user.name" value="Prakash" />
+
+          <property name="user.language" value="en" />
+
+          <property name="sun.boot.library.path" value="D:\jdk1.8.144\jre\bin" />
+
+          <property name="reports.dir" value="reports" />
+
+          <property name="ant.project.default-target" value="coverage" />
+
+          <property name="ant.project.name" value="cobertura.usage" />
+
+          <property name="java.version" value="1.8.0_144" />
+
+          <property name="coverage.html.dir" value="reports/cobertura-html" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="java.endorsed.dirs" value="D:\jdk1.8.144\jre\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="amd64" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="classes.dir" value="classes" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="D:\jdk1.8.144\jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="D:\Junit4-test-apps\Cobertura-Code-Coverage\build.xml" />
+
+          <property name="os.version" value="6.1" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="25.144-b01" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="user.script" value="" />
+
+          <property name="eclipse.pdebuild.scripts" value="D:\eclipse-jee-photon\plugins\org.eclipse.pde.build_3.10.0.v20180512-1217\scripts" />
+
+          <property name="reports.xml.dir" value="reports/junit-xml" />
+
+          <property name="user.home" value="C:\Users\Prakash" />
+
+          <property name="ant.file.cobertura.usage" value="D:\Junit4-test-apps\Cobertura-Code-Coverage\build.xml" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="coverage.xml.dir" value="reports/cobertura-xml" />
+
+          <property name="java.library.path" value="D:\jdk1.8.144\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/jdk1.8.144/bin/../jre/bin/server;D:/jdk1.8.144/bin/../jre/bin;D:/jdk1.8.144/bin/../jre/lib/amd64;D:/jdk1.8.144/bin;C:\Program Files\Git\bin;C:\Windows\System32;D:\spring-2.0.1\bin;C:\Program Files\Docker Toolbox;D:\Kubectl-Path;C:\Users\Prakash\AppData\Roaming\npm;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\PuTTY\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Perforce\;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Server 5.1\bin;D:\curl-7.70\bin;D:/jdk1.8.144/bin;C:\Program Files\Git\bin;C:\Windows\System32;D:\spring-2.0.1\bin;C:\Program Files\Docker Toolbox;D:\Kubectl-Path;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.9\sbin;C:\Python27;C:\Python27\Scripts;C:\Program Files\nodejs;;C:\Program Files\Docker Toolbox;C:\Users\Prakash\AppData\Roaming\npm;C:\Users\Prakash\AppData\Local\Programs\Microsoft VS Code\bin;D:\curl-7.70\bin;;D:\eclipse-jee-photon;;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.simple.SimpleTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\Junit4-test-apps\Cobertura-Code-Coverage\reports\junit-xml\TEST-com.simple.SimpleTest.xml crashfile=D:\Junit4-test-apps\Cobertura-Code-Coverage\junitvmwatcher5138328522580122395.properties propsfile=D:\Junit4-test-apps\Cobertura-Code-Coverage\junit3268520719647259557.properties" />
+
+          <property name="java.class.path" value="D:\Junit4-test-apps\Cobertura-Code-Coverage\instrumented;D:\Junit4-test-apps\Cobertura-Code-Coverage\classes;D:\EJB3.1-TDD-Testing\EJB-Day8\Cobertura-Code-Coverage\cobertura-1.9.4.1-bin\cobertura.jar;D:\EJB3.1-TDD-Testing\EJB-Day8\Cobertura-Code-Coverage\cobertura-1.9.4.1-bin\lib\asm-3.0.jar;D:\EJB3.1-TDD-Testing\EJB-Day8\Cobertura-Code-Coverage\cobertura-1.9.4.1-bin\lib\asm-tree-3.0.jar;D:\EJB3.1-TDD-Testing\EJB-Day8\Cobertura-Code-Coverage\cobertura-1.9.4.1-bin\lib\jakarta-oro-2.0.8.jar;D:\EJB3.1-TDD-Testing\EJB-Day8\Cobertura-Code-Coverage\cobertura-1.9.4.1-bin\lib\log4j-1.2.9.jar;D:\Junit4-test-apps\Cobertura-Code-Coverage\junit-4.2.jar;D:\Junit4-test-apps\Cobertura-Code-Coverage\slf4j-api-1.7.30.jar;D:\Junit4-test-apps\Cobertura-Code-Coverage\slf4j-log4j12-1.7.1.jar;D:\Junit4-test-apps\Cobertura-Code-Coverage;D:\jdk1.8.144\jre\lib\ext\jfxrt.jar;D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib\ant-launcher.jar;D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib\ant.jar;D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib\ant-junit.jar;D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib\ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.10.3 compiled on March 24 2018" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="base.dir" value="." />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="Service Pack 1" />
+
+          <property name="eclipse.pdebuild.home" value="D:\eclipse-jee-photon\plugins\org.eclipse.pde.build_3.10.0.v20180512-1217\." />
+
+          <property name="java.io.tmpdir" value="C:\Users\Prakash\AppData\Local\Temp\" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="ant.file.type.cobertura.usage" value="file" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="instrumented.dir" value="instrumented" />
+
+          <property name="java.ext.dirs" value="D:\jdk1.8.144\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="D:\Junit4-test-apps\Cobertura-Code-Coverage" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="D:\Junit4-test-apps\Cobertura-Code-Coverage" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="D:\eclipse-jee-photon\plugins\org.apache.ant_1.10.3.v20180417-1627\lib\ant.jar" />
+
+          <property name="file.encoding" value="Cp1252" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="src.dir" value="src" />
+
+          <property name="ant.project.invoked-targets" value="coverage" />
+
+      </properties>
+
+      <testcase classname="junit.framework.TestSuite$1" name="warning" time="0.006">
+          <failure message="Exception in constructor: testSum (java.lang.VerifyError: Instruction type does not match stack map&#xa;Exception Details:&#xa;  Location:&#xa;    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload&#xa;  Reason:&#xa;    Type integer (current frame, locals[3]) is not assignable to &apos;java/util/Iterator&apos; (stack map, locals[3])&#xa;  Current Frame:&#xa;    bci: @33&#xa;    flags: { }&#xa;    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, integer, integer, &apos;java/util/Iterator&apos; }&#xa;    stack: { }&#xa;  Stackmap Frame:&#xa;    bci: @33&#xa;    flags: { }&#xa;    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, &apos;java/util/Iterator&apos; }&#xa;    stack: { }&#xa;  Bytecode:&#xa;    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336&#xa;    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a&#xa;    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e&#xa;    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000&#xa;    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11&#xa;    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6&#xa;    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9&#xa;    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c&#xa;    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c&#xa;    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800&#xa;    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035&#xa;    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00&#xa;    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11&#xa;    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100&#xa;    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03&#xa;    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2&#xa;    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504&#xa;    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060&#xa;    0x0000120: b800 1515 04ac                         &#xa;  Stackmap Table:&#xa;    append_frame(@33,Integer,Object[#113])&#xa;    append_frame(@213,Integer)&#xa;    chop_frame(@255,2)&#xa;&#xd;&#xa;&#x9;at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)&#xd;&#xa;&#x9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#xd;&#xa;&#x9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#xd;&#xa;&#x9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#xd;&#xa;&#x9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#xd;&#xa;&#x9;at junit.framework.TestSuite.createTest(TestSuite.java:65)&#xd;&#xa;&#x9;at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#xd;&#xa;&#x9;at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:504)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)&#xd;&#xa;)" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Exception in constructor: testSum (java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload
+  Reason:
+    Type integer (current frame, locals[3]) is not assignable to &apos;java/util/Iterator&apos; (stack map, locals[3])
+  Current Frame:
+    bci: @33
+    flags: { }
+    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, integer, integer, &apos;java/util/Iterator&apos; }
+    stack: { }
+  Stackmap Frame:
+    bci: @33
+    flags: { }
+    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, &apos;java/util/Iterator&apos; }
+    stack: { }
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336
+    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a
+    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e
+    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000
+    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11
+    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6
+    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9
+    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c
+    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c
+    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800
+    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035
+    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00
+    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11
+    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100
+    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03
+    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2
+    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504
+    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060
+    0x0000120: b800 1515 04ac                         
+  Stackmap Table:
+    append_frame(@33,Integer,Object[#113])
+    append_frame(@213,Integer)
+    chop_frame(@255,2)
+
+	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+)
+</failure>
+
+      </testcase>
+
+      <testcase classname="junit.framework.TestSuite$1" name="warning" time="0.002">
+          <failure message="Exception in constructor: testUpdate (java.lang.VerifyError: Instruction type does not match stack map&#xa;Exception Details:&#xa;  Location:&#xa;    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload&#xa;  Reason:&#xa;    Type integer (current frame, locals[3]) is not assignable to &apos;java/util/Iterator&apos; (stack map, locals[3])&#xa;  Current Frame:&#xa;    bci: @33&#xa;    flags: { }&#xa;    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, integer, integer, &apos;java/util/Iterator&apos; }&#xa;    stack: { }&#xa;  Stackmap Frame:&#xa;    bci: @33&#xa;    flags: { }&#xa;    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, &apos;java/util/Iterator&apos; }&#xa;    stack: { }&#xa;  Bytecode:&#xa;    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336&#xa;    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a&#xa;    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e&#xa;    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000&#xa;    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11&#xa;    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6&#xa;    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9&#xa;    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c&#xa;    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c&#xa;    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800&#xa;    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035&#xa;    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00&#xa;    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11&#xa;    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100&#xa;    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03&#xa;    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2&#xa;    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504&#xa;    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060&#xa;    0x0000120: b800 1515 04ac                         &#xa;  Stackmap Table:&#xa;    append_frame(@33,Integer,Object[#113])&#xa;    append_frame(@213,Integer)&#xa;    chop_frame(@255,2)&#xa;&#xd;&#xa;&#x9;at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)&#xd;&#xa;&#x9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#xd;&#xa;&#x9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#xd;&#xa;&#x9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#xd;&#xa;&#x9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#xd;&#xa;&#x9;at junit.framework.TestSuite.createTest(TestSuite.java:65)&#xd;&#xa;&#x9;at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#xd;&#xa;&#x9;at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:504)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)&#xd;&#xa;)" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Exception in constructor: testUpdate (java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload
+  Reason:
+    Type integer (current frame, locals[3]) is not assignable to &apos;java/util/Iterator&apos; (stack map, locals[3])
+  Current Frame:
+    bci: @33
+    flags: { }
+    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, integer, integer, &apos;java/util/Iterator&apos; }
+    stack: { }
+  Stackmap Frame:
+    bci: @33
+    flags: { }
+    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, &apos;java/util/Iterator&apos; }
+    stack: { }
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336
+    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a
+    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e
+    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000
+    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11
+    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6
+    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9
+    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c
+    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c
+    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800
+    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035
+    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00
+    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11
+    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100
+    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03
+    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2
+    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504
+    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060
+    0x0000120: b800 1515 04ac                         
+  Stackmap Table:
+    append_frame(@33,Integer,Object[#113])
+    append_frame(@213,Integer)
+    chop_frame(@255,2)
+
+	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+)
+</failure>
+
+      </testcase>
+
+      <testcase classname="junit.framework.TestSuite$1" name="warning" time="0.001">
+          <failure message="Exception in constructor: testF (java.lang.VerifyError: Instruction type does not match stack map&#xa;Exception Details:&#xa;  Location:&#xa;    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload&#xa;  Reason:&#xa;    Type integer (current frame, locals[3]) is not assignable to &apos;java/util/Iterator&apos; (stack map, locals[3])&#xa;  Current Frame:&#xa;    bci: @33&#xa;    flags: { }&#xa;    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, integer, integer, &apos;java/util/Iterator&apos; }&#xa;    stack: { }&#xa;  Stackmap Frame:&#xa;    bci: @33&#xa;    flags: { }&#xa;    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, &apos;java/util/Iterator&apos; }&#xa;    stack: { }&#xa;  Bytecode:&#xa;    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336&#xa;    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a&#xa;    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e&#xa;    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000&#xa;    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11&#xa;    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6&#xa;    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9&#xa;    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c&#xa;    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c&#xa;    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800&#xa;    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035&#xa;    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00&#xa;    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11&#xa;    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100&#xa;    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03&#xa;    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2&#xa;    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504&#xa;    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060&#xa;    0x0000120: b800 1515 04ac                         &#xa;  Stackmap Table:&#xa;    append_frame(@33,Integer,Object[#113])&#xa;    append_frame(@213,Integer)&#xa;    chop_frame(@255,2)&#xa;&#xd;&#xa;&#x9;at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)&#xd;&#xa;&#x9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#xd;&#xa;&#x9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#xd;&#xa;&#x9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#xd;&#xa;&#x9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#xd;&#xa;&#x9;at junit.framework.TestSuite.createTest(TestSuite.java:65)&#xd;&#xa;&#x9;at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#xd;&#xa;&#x9;at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:504)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)&#xd;&#xa;)" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Exception in constructor: testF (java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload
+  Reason:
+    Type integer (current frame, locals[3]) is not assignable to &apos;java/util/Iterator&apos; (stack map, locals[3])
+  Current Frame:
+    bci: @33
+    flags: { }
+    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, integer, integer, &apos;java/util/Iterator&apos; }
+    stack: { }
+  Stackmap Frame:
+    bci: @33
+    flags: { }
+    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, &apos;java/util/Iterator&apos; }
+    stack: { }
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336
+    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a
+    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e
+    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000
+    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11
+    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6
+    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9
+    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c
+    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c
+    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800
+    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035
+    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00
+    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11
+    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100
+    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03
+    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2
+    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504
+    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060
+    0x0000120: b800 1515 04ac                         
+  Stackmap Table:
+    append_frame(@33,Integer,Object[#113])
+    append_frame(@213,Integer)
+    chop_frame(@255,2)
+
+	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+)
+</failure>
+
+      </testcase>
+
+      <testcase classname="junit.framework.TestSuite$1" name="warning" time="0.001">
+          <failure message="Exception in constructor: testSquare (java.lang.VerifyError: Instruction type does not match stack map&#xa;Exception Details:&#xa;  Location:&#xa;    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload&#xa;  Reason:&#xa;    Type integer (current frame, locals[3]) is not assignable to &apos;java/util/Iterator&apos; (stack map, locals[3])&#xa;  Current Frame:&#xa;    bci: @33&#xa;    flags: { }&#xa;    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, integer, integer, &apos;java/util/Iterator&apos; }&#xa;    stack: { }&#xa;  Stackmap Frame:&#xa;    bci: @33&#xa;    flags: { }&#xa;    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, &apos;java/util/Iterator&apos; }&#xa;    stack: { }&#xa;  Bytecode:&#xa;    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336&#xa;    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a&#xa;    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e&#xa;    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000&#xa;    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11&#xa;    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6&#xa;    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9&#xa;    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c&#xa;    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c&#xa;    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800&#xa;    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035&#xa;    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00&#xa;    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11&#xa;    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100&#xa;    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03&#xa;    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2&#xa;    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504&#xa;    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060&#xa;    0x0000120: b800 1515 04ac                         &#xa;  Stackmap Table:&#xa;    append_frame(@33,Integer,Object[#113])&#xa;    append_frame(@213,Integer)&#xa;    chop_frame(@255,2)&#xa;&#xd;&#xa;&#x9;at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)&#xd;&#xa;&#x9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#xd;&#xa;&#x9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#xd;&#xa;&#x9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#xd;&#xa;&#x9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#xd;&#xa;&#x9;at junit.framework.TestSuite.createTest(TestSuite.java:65)&#xd;&#xa;&#x9;at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#xd;&#xa;&#x9;at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:504)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)&#xd;&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)&#xd;&#xa;)" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Exception in constructor: testSquare (java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    com/simple/Simple.sum(Ljava/util/Collection;)I @33: aload
+  Reason:
+    Type integer (current frame, locals[3]) is not assignable to &apos;java/util/Iterator&apos; (stack map, locals[3])
+  Current Frame:
+    bci: @33
+    flags: { }
+    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, integer, integer, &apos;java/util/Iterator&apos; }
+    stack: { }
+  Stackmap Frame:
+    bci: @33
+    flags: { }
+    locals: { &apos;com/simple/Simple&apos;, &apos;java/util/Collection&apos;, integer, &apos;java/util/Iterator&apos; }
+    stack: { }
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 120f 1100 4eb8 0015 0336
+    0x0000010: 0412 0f11 0050 b800 152b b900 6f01 003a
+    0x0000020: 0519 05b9 0074 0100 1100 503d 1100 003e
+    0x0000030: 9900 b71c 1100 50a0 0016 1d11 0000 a000
+    0x0000040: 0f12 0f1c 1d04 b800 2c11 ffff 3e12 0f11
+    0x0000050: 0052 b800 1519 05b9 0078 0100 c000 7ab6
+    0x0000060: 007d 3606 120f 1100 54b8 0015 b200 22b9
+    0x0000070: 0028 0100 1100 543d 1100 003e 9900 411c
+    0x0000080: 1100 54a0 0016 1d11 0000 a000 0f12 0f1c
+    0x0000090: 1d04 b800 2c11 ffff 3e12 0f11 0056 b800
+    0x00000a0: 15b2 0022 bb00 2e59 b700 2f12 7fb6 0035
+    0x00000b0: 1506 b600 38b6 003c b900 4002 001d 9b00
+    0x00000c0: 0f12 0f1c 1d03 b800 2c11 ffff 3e12 0f11
+    0x00000d0: 0059 b800 1515 0415 0660 3604 120f 1100
+    0x00000e0: 5ab8 0015 a7ff 3d1d 9b00 0f12 0f1c 1d03
+    0x00000f0: b800 2c11 ffff 3e12 0f11 005d b800 15b2
+    0x0000100: 0022 bb00 2e59 b700 2f12 4fb6 0035 1504
+    0x0000110: b600 38b6 003c b900 4002 0012 0f11 0060
+    0x0000120: b800 1515 04ac                         
+  Stackmap Table:
+    append_frame(@33,Integer,Object[#113])
+    append_frame(@213,Integer)
+    chop_frame(@255,2)
+
+	at com.simple.SimpleTest.&lt;init&gt;(SimpleTest.java:13)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+</testsuites>
